@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest":true,
+    "jest/globals": true
+  },
+ 
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "node",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "no-console": "warn",
+    "no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
+    "eqeqeq": ["error", "always"],
+    "curly": ["error", "all"],
+    "node/no-unsupported-features/es-syntax": "off",
+    "node/no-unpublished-import": ["error", { "allowModules": ["@testing-library/jest-dom","@testing-library/react"] }],
+    "node/no-missing-import": ["error"]
+  }
+}
+

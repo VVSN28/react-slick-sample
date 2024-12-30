@@ -1,0 +1,10 @@
+{
+  "bail": 1,
+  "verbose": true,
+  "transform": {
+    "^.+\\.[t|j]sx?$": "babel-jest",
+    "\\.(css|less|scss|sass)$": "jest-transform-stub"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFiles": ["matchmedia-polyfill"]
+}
